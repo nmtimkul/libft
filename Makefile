@@ -6,7 +6,7 @@
 #    By: nmtimkul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/06 11:25:02 by nmtimkul          #+#    #+#              #
-#    Updated: 2017/07/22 10:56:02 by nmtimkul         ###   ########.fr        #
+#    Updated: 2017/11/10 18:40:24 by nmtimkul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,6 +73,13 @@ SRCS = ft_memset.c \
 	  ft_lstiter.c \
 	  ft_lstmap.c \
 	  ft_swap.c \
+	  ft_chrposition.c \
+	  ft_countwords.c \
+	  ft_cpyuntil.c \
+	  ft_strjoinchr.c \
+	  ft_min.c \
+	  ft_putnchr.c \
+	  ft_max.c \
 
 FLAG = -Wall -Werror -Wextra
 

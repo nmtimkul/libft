@@ -6,7 +6,7 @@
 /*   By: nmtimkul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 12:14:02 by nmtimkul          #+#    #+#             */
-/*   Updated: 2017/07/22 10:49:57 by nmtimkul         ###   ########.fr       */
+/*   Updated: 2017/11/10 18:40:12 by nmtimkul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+
+# define MALLCHECK(x) if (!x) return (-1)
+# define BUFF_SIZE 1
 
 typedef struct		s_list
 {
@@ -83,5 +86,12 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_swap(int *a, int *b);
+int					ft_chrposition(const char *str, char c);
+int					ft_countwords(char const *str, char c);
+int					ft_cpyuntil(char **dst, char *src, char c);
+char				*ft_strjoinchr(char const *s, char c);
+size_t				ft_min(size_t x, size_t y);
+void				ft_putnchr(char c, unsigned int n);
+size_t				ft_max(size_t a, size_t b);
 
 #endif
