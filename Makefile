@@ -6,7 +6,7 @@
 #    By: nmtimkul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/06/06 11:25:02 by nmtimkul          #+#    #+#              #
-#    Updated: 2017/11/10 18:40:24 by nmtimkul         ###   ########.fr        #
+#    Updated: 2017/11/21 16:52:10 by nmtimkul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,6 +80,7 @@ SRCS = ft_memset.c \
 	  ft_min.c \
 	  ft_putnchr.c \
 	  ft_max.c \
+	  get_next_line.c \
 
 FLAG = -Wall -Werror -Wextra
 

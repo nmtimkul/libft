@@ -6,7 +6,7 @@
 /*   By: nmtimkul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 12:14:02 by nmtimkul          #+#    #+#             */
-/*   Updated: 2017/11/10 18:40:12 by nmtimkul         ###   ########.fr       */
+/*   Updated: 2017/11/10 18:56:36 by nmtimkul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ char				*ft_strjoinchr(char const *s, char c);
 size_t				ft_min(size_t x, size_t y);
 void				ft_putnchr(char c, unsigned int n);
 size_t				ft_max(size_t a, size_t b);
+int					get_next_line(const int fd, char **line);
 
 #endif
