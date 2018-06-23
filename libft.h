@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmtimkul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/29 12:14:02 by nmtimkul          #+#    #+#             */
-/*   Updated: 2017/11/10 18:56:36 by nmtimkul         ###   ########.fr       */
+/*   Created: 2018/06/05 11:05:20 by nmtimkul          #+#    #+#             */
+/*   Updated: 2018/06/23 13:15:09 by nmtimkul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 
 # define MALLCHECK(x) if (!x) return (-1)
+# define IS_SPACE(x) (x == ' ' || x == '\t' || x == '\r' || x = '\f')
 # define BUFF_SIZE 1
 
 typedef struct		s_list
@@ -73,7 +74,6 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
-char				*ft_strtrim(char const *s);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strmap(char const *s, char (*f)(char));
@@ -93,6 +93,7 @@ char				*ft_strjoinchr(char const *s, char c);
 size_t				ft_min(size_t x, size_t y);
 void				ft_putnchr(char c, unsigned int n);
 size_t				ft_max(size_t a, size_t b);
-int					get_next_line(const int fd, char **line);
+int					ft_isspace(int c);
+char				*ft_strtrim(char const *s);
 
 #endif

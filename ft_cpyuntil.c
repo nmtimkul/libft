@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmtimkul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 16:18:22 by nmtimkul          #+#    #+#             */
-/*   Updated: 2017/11/10 18:18:20 by nmtimkul         ###   ########.fr       */
+/*   Created: 2018/06/23 16:18:22 by nmtimkul          #+#    #+#             */
+/*   Updated: 2018/06/23 11:28:38 by nmtimkul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_cpyuntil(char **dst, char *src, char c)
 {
 	int		i;
-	int		poz;
+	int		p;
 	int		counter;
 
 	i = -1;
@@ -23,7 +23,7 @@ int		ft_cpyuntil(char **dst, char *src, char c)
 	while (src[++i])
 		if (src[i] == c)
 			break ;
-	poz = i;
+	p = i;
 	if (!(*dst = ft_strnew(i)))
 		return (0);
 	while (src[counter] && counter < i)
@@ -32,5 +32,5 @@ int		ft_cpyuntil(char **dst, char *src, char c)
 			return (0);
 		counter++;
 	}
-	return (poz);
+	return (p);
 }

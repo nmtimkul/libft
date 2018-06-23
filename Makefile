@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nmtimkul <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/06/06 11:25:02 by nmtimkul          #+#    #+#              #
-#    Updated: 2017/11/21 16:52:10 by nmtimkul         ###   ########.fr        #
+#    Created: 2018/06/06 14:30:51 by nmtimkul          #+#    #+#              #
+#    Updated: 2018/06/23 13:13:05 by nmtimkul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,6 @@ SRCS = ft_memset.c \
 	  ft_strnequ.c \
 	  ft_strsub.c \
 	  ft_strjoin.c \
-	  ft_strtrim.c \
 	  ft_strsplit.c \
 	  ft_itoa.c \
 	  ft_putchar.c \
@@ -80,7 +79,8 @@ SRCS = ft_memset.c \
 	  ft_min.c \
 	  ft_putnchr.c \
 	  ft_max.c \
-	  get_next_line.c \
+	  ft_isspace.c \
+	  ft_strtrim.c \
 
 FLAG = -Wall -Werror -Wextra
 
@@ -92,11 +92,13 @@ $(NAME):
 	gcc $(FLAG) -c $(SRCS) 
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+	@echo "libft done!"
 
 clean:
 	/bin/rm -f $(OBJ)
 
 fclean: clean
 	/bin/rm -f $(NAME)
+	@echo "libft cleaned up!"
 
 re: fclean all

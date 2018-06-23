@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmtimkul <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/06/17 09:48:24 by nmtimkul          #+#    #+#             */
-/*   Updated: 2017/07/22 10:47:02 by nmtimkul         ###   ########.fr       */
+/*   Created: 2018/06/17 09:48:24 by nmtimkul          #+#    #+#             */
+/*   Updated: 2018/06/23 13:12:25 by nmtimkul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,20 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char	*tr;
-	char	*ret;
-	int		i;
+	size_t	b;
+	size_t	e;
+	size_t	len;
+	char	*str;
 
 	if (!s)
 		return (NULL);
-	tr = ft_strdup(s);
-	if (!tr)
-		return (NULL);
-	else
-	{
-		i = 0;
-		while (tr[i] == ' ' || tr[i] == '\n' || tr[i] == '\t')
-			i++;
-		tr = ft_strcpy(tr, tr + i);
-		i = ft_strlen(tr) - 1;
-		while ((tr[i] == ' ' || tr[i] == '\n' || tr[i] == '\t') && i >= 0)
-		{
-			tr[i] = '\0';
-			i--;
-		}
-		ret = ft_strdup(tr);
-		free(tr);
-		return (ret);
-	}
+	b = 0;
+	e = ft_strlen(s) - 1;
+	while (b < ft_strlen(s) && ft_isspace(s[b]))
+		b++;
+	while (e > b && ft_isspace(s[e]))
+		e--;
+	len = e - b + 1;
+	str = ft_strsub(s, b, len);
+	return (str);
 }
